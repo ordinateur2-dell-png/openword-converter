@@ -8,3 +8,12 @@ This application is currently designed for Windows.
 Current status:
 The command-line version is the main and actively maintained version of this project.
 The Pygame-based graphical interface is experimental and may not receive regular updates.
+
+
+License
+
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+See the LICENSE file for the full license text.
+
+LibreOffice is a separate software project and is not part of this project.
