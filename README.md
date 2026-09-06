@@ -1,6 +1,7 @@
-# openword-convertor
-a simple convertor project buid to make the conversion a files better
-warning this app need to install LibreOffice.
-this program is not officialy associated to LbreOffice
-this app is not compilated use pyinstaller or another py compiler to compile it and use it as a executable
-this app is build for windows
+A simple converter project built to make file conversion easier.
+
+⚠️ Warning
+This application requires LibreOffice to be installed on your computer.
+This application is not officially associated with, endorsed by, or affiliated with LibreOffice.
+This application is currently not compiled into an executable. To create an executable, you can use PyInstaller or another Python packaging tool.
+This application is currently designed for Windows.
