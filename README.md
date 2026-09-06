@@ -9,6 +9,15 @@ Current status:
 The command-line version is the main and actively maintained version of this project.
 The Pygame-based graphical interface is experimental and may not receive regular updates.
 
+This version support:
+
+.odt to .docx
+
+.docx to .odt
+
+.ods to .xlsx
+
+.xlsx to .ods
 
 License
 
