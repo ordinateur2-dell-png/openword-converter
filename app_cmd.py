@@ -48,6 +48,16 @@ def convertir_un_fichier(a):
                 f for f in os.listdir(dossier)
                 if f.lower().endswith(".ods")
             ]
+        elif a == 5:
+            fichiers = [
+                f for f in os.listdir(dossier)
+                if f.lower().endswith(".pptx")
+            ]
+        elif a == 6:
+            fichiers = [
+                f for f in os.listdir(dossier)
+                if f.lower().endswith(".odp")
+            ]
         print(f"{len(fichiers)} fichiers trouvés.")
         number_of_files = len(fichiers)
         for fichier in fichiers:
@@ -87,6 +97,22 @@ def convertir_un_fichier(a):
                     "--outdir", dossier_sortie,
                     chemin
                 ])
+            elif a == 5:
+                subprocess.run([
+                    r"C:\Program Files\LibreOffice\program\soffice.exe",
+                    "--headless",
+                    "--convert-to", "odp",
+                    "--outdir", dossier_sortie,
+                    chemin
+                ])
+            elif a == 6:
+                subprocess.run([
+                    r"C:\Program Files\LibreOffice\program\soffice.exe",
+                    "--headless",
+                    "--convert-to", "pptx",
+                    "--outdir", dossier_sortie,
+                    chemin
+                ])
             number_of_files_read+=1
             print(f"{number_of_files_read}/{number_of_files}")
         print("Conversion terminée.")
@@ -96,7 +122,9 @@ while True:
     print("tap 2 to start a text file conversion process (.odt to .docx)")
     print("tap 3 to start a tableur file conversion process (.xlsx to .ods)")
     print("tap 4 to start a tableur file conversion process (.ods to .xlsx)")
-    print("tap 5 to exit program")
+    print("tap 5 to start a presentation file conversion process (.pptx to .odp)")
+    print("tap 6 to start a presentation file conversion process (.odp to .pptx)")
+    print("tap 7 to exit program")
 
     input_value = input(">")
 
@@ -114,5 +142,12 @@ while True:
         number_of_files_read=0
         convertir_un_fichier(4)
     elif input_value == "5":
+        number_of_files_read=0
+        convertir_un_fichier(5)
+    elif input_value == "6":
+        number_of_files_read=0
+        convertir_un_fichier(6)
+    elif input_value == "7":
         sys.exit()
+    
     
